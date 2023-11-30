@@ -1974,5 +1974,5 @@ Ec-11_002770.1       -            109 LD                   -             63     
 # Target file:     PUBLIC_Ectocarpus-sp7_proteins.fa
 # Option settings: hmmsearch --domtblout PUBLIC_Ectocarpus-sp7_proteins.domtblout --cut_ga ../domains_v12.txt PUBLIC_Ectocarpus-sp7_proteins.fa 
 # Current dir:     /home/saskia/code/github/Rensing-Lab/TAPscan-classify/test-data
-# Date:            Thu Nov 30 11:35:24 2023
+# Date:            Thu Nov 30 12:05:57 2023
 # [ok]
