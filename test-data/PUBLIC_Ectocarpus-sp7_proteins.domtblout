@@ -1968,11 +1968,11 @@ Ec-12_008370.1       -           1027 zz-ADA2              -             42     
 Ec-11_002770.1       -            109 LD                   -             63      0.12   12.5   0.0   1   1   7.1e-06      0.17   12.0   0.0    17    63    56   103    45   103 0.81 eukaryotic translation  initiation factor 1 - SUI1 (109) ;mRNA; f:2907969-2910493
 #
 # Program:         hmmsearch
-# Version:         3.1b2 (February 2015)
+# Version:         3.3.2 (Nov 2020)
 # Pipeline mode:   SEARCH
-# Query file:      /ebio/abt5/rpetroll/phaeoexplorer/TAPs/domains_v12.txt
-# Target file:     /ebio/abt5_projects/Phaeoexplorer/data/04__FINAL_PROTEOMES/PUBLIC_Ectocarpus-sp7_proteins.fa
-# Option settings: hmmsearch --domtblout PUBLIC_Ectocarpus-sp7_proteins.domtblout --cut_ga /ebio/abt5/rpetroll/phaeoexplorer/TAPs/domains_v12.txt /ebio/abt5_projects/Phaeoexplorer/data/04__FINAL_PROTEOMES/PUBLIC_Ectocarpus-sp7_proteins.fa 
-# Current dir:     /ebio/abt5/rpetroll/phaeoexplorer/TAPs
-# Date:            Fri Jul 22 14:55:05 2022
+# Query file:      ../domains_v12.txt
+# Target file:     PUBLIC_Ectocarpus-sp7_proteins.fa
+# Option settings: hmmsearch --domtblout PUBLIC_Ectocarpus-sp7_proteins.domtblout --cut_ga ../domains_v12.txt PUBLIC_Ectocarpus-sp7_proteins.fa 
+# Current dir:     /home/saskia/code/github/Rensing-Lab/TAPscan-classify/test-data
+# Date:            Thu Nov 30 11:35:24 2023
 # [ok]
