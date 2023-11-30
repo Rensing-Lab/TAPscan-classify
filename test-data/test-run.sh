@@ -8,12 +8,12 @@ do
 NAME=$(basename $i .fa)
 
 # run HMMEr search
-echo "Running HMMsearch for $NAME\n"
+echo "Running HMMsearch for $NAME"
 hmmsearch --domtblout $NAME.domtblout --cut_ga ../domains_v12.txt $i
 
 
 # run TAPscan script
-echo "Running TAPscan Classify for $NAME\n"
+echo "Running TAPscan Classify for $NAME"
 ../tapscan_classify.pl \
 $NAME.domtblout \
 ../rules_v81.txt \
