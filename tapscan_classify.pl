@@ -2,8 +2,10 @@
 use strict;
 use warnings;
 
+use File::Basename;
+
 # Written by Gerrit Timmerhaus (gerrit.timmerhaus@biologie.uni-freiburg.de).
-# Changes included by Kristian Ullrich, Per Wilhelmsson and Romy Petroll.
+# Changes included by Kristian Ullrich, Per Wilhelmsson, Romy Petroll and Saskia Hiltemann.
 
 # Script to extract all detected domains out of a hmmsearch results file and classify the families of all used proteins based on these domains.
 # The classification depends on a table which contains all known classification rules for the protein families of interest and on specific coverage values defined for every domain.
@@ -21,6 +23,27 @@ if (!@ARGV or ($ARGV [0] eq "-h") or ($ARGV [0] eq "-help")) {
 	exit;
 }
 
+=cut
+$ap = Getopt::ArgParse->new_parser(
+       prog        => 'TAPscan Classify',
+       description => 'This tool will detect TAPs in your sequence data',
+   epilog      => 'This appears at the bottom of usage',
+);
+$ap->add_arg('--domtblout', '-d', required => 1);
+$ap->add_arg('--rules', '-r', required => 1);
+$ap->add_arg('--coverage', '-c', required => 0);
+$ap->add_arg('--output_family_classifications', '-o1', required => 0); # output.1
+$ap->add_arg('--output_family_statistics', '-o2', required => 0); #output.2
+$ap->add_arg('--output_subfamily_classifications', '-o3', required => 0); #output.3
+$ap->add_arg('--gene_model_filter', '-g', required => 0); #output.3
+
+$namespace = $parser->parse_args(@command_line);
+
+print $namespace;
+
+exit
+=cut
+
 # hmmsearch_output: domtblout file
 my $hmmsearch_output = $ARGV [0];
 # decision_table: rules file
@@ -35,6 +58,9 @@ my $subfamily_classifications = $ARGV [4];
 my $domspec_cuts = $ARGV [5];
 # gene_model_filte: filter for ARATH and ORYSA
 my $gene_model_filter = $ARGV [6];
+
+# get basename for output files
+my($basename, $dirs, $suffix) = fileparse($hmmsearch_output, "qr/\.[^.]*/");
 
 if ($family_statistics eq "") {
 	print "Usage: extract.and.classify.pl <hmmsearch output file> <classification rules> <output classifications file> <output family statistics file> <output subfamil classifications file> <\"filter\" (if desired)>\n\n";
@@ -113,7 +139,7 @@ foreach my $output (@output) {
 
 ### 2.1 Run through length_cut_off loop (throws out entries below coverage values)
 my @cutarray;
-open(FH, '>', "filtered_sequences.tsv") or die $!;
+open(FH, '>', "${basename}_filtered_sequences.txt") or die $!;
 print FH "Below are the sequences that were filtered out, along with the reason";
 foreach my $output (@output) {
 	$output =~ /^(\S+)\t+(\S+)\t(\S+)\t(\S+)/;
@@ -897,6 +923,7 @@ print "\n$unclassified_families proteins could not be classified\n\n";
 print "*** The results were written in $family_classifications and $subfamily_classifications ***\n";
 print "*** done ***\n\n";
 
+
 exit;
 
 sub get_file_data {
@@ -919,4 +946,5 @@ sub get_file_data {
 
 	return @filedata;
 }
+
 
