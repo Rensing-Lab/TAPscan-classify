@@ -42,7 +42,7 @@ my $domspec_cuts = $ARGV [5];
 my $gene_model_filter = $ARGV [6];
 
 # get basename for output files
-my($basename, $dirs, $suffix) = fileparse($hmmsearch_output, "qr/\.[^.]*/");
+my($basename, $dirs, $suffix) = fileparse($hmmsearch_output, qr/\.[^.]*/);
 
 if ($family_statistics eq "") {
 	print "Usage: extract.and.classify.pl <hmmsearch output file> <classification rules> <output classifications file> <output family statistics file> <output subfamil classifications file> <\"filter\" (if desired)>\n\n";
