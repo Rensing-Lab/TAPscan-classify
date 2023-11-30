@@ -1,8 +1,11 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
-
 use File::Basename;
+
+my $tapscan_version = "v0.75";
+print "Running TAPscan Classify version $tapscan_version \n\n";
+
 
 # Written by Gerrit Timmerhaus (gerrit.timmerhaus@biologie.uni-freiburg.de).
 # Changes included by Kristian Ullrich, Per Wilhelmsson, Romy Petroll and Saskia Hiltemann.
