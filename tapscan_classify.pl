@@ -2,9 +2,9 @@
 use strict;
 use warnings;
 
-my $tapscan_version="0.74"
+my $tapscan_version="0.74";
 
-print "Running TAPscan classify version $tapscan_version\n\n"
+print "Running TAPscan classify version $tapscan_version\n\n";
 
 # Written by Gerrit Timmerhaus (gerrit.timmerhaus@biologie.uni-freiburg.de).
 # Changes included by Kristian Ullrich, Per Wilhelmsson and Romy Petroll.
