@@ -7,12 +7,13 @@ do
 
 NAME=$(basename $i .fa)
 
-echo "Running HMMsearch for $NAME\n"
 # run HMMEr search
-#hmmsearch --domtblout $NAME.domtblout --cut_ga ../domains_v12.txt $i
+echo "Running HMMsearch for $NAME\n"
+hmmsearch --domtblout $NAME.domtblout --cut_ga ../domains_v12.txt $i
 
-echo "Running TAPscan Classify for $NAME\n"
+
 # run TAPscan script
+echo "Running TAPscan Classify for $NAME\n"
 ../tapscan_classify.pl \
 $NAME.domtblout \
 ../rules_v81.txt \
