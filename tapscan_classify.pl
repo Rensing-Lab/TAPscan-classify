@@ -2,10 +2,6 @@
 use strict;
 use warnings;
 
-my $tapscan_version="0.74";
-
-print "Running TAPscan classify version $tapscan_version\n\n";
-
 # Written by Gerrit Timmerhaus (gerrit.timmerhaus@biologie.uni-freiburg.de).
 # Changes included by Kristian Ullrich, Per Wilhelmsson and Romy Petroll.
 
@@ -117,12 +113,18 @@ foreach my $output (@output) {
 
 ### 2.1 Run through length_cut_off loop (throws out entries below coverage values)
 my @cutarray;
+open(FH, '>', "filtered_sequences.tsv") or die $!;
+print FH "Below are the sequences that were filtered out, along with the reason";
 foreach my $output (@output) {
 	$output =~ /^(\S+)\t+(\S+)\t(\S+)\t(\S+)/;
 	if ($4 > $cuts{$2}) {
 	push (@cutarray, $output);
 	}
+    else{
+        print FH "$output --> did not meet coverage cutoff of $cuts{$2} (cov was $4)\n"
+    }
 }
+close(FH);
 
 # End up with (prot name) (domain name) (dom evalue) (overlapping)
 
