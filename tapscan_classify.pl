@@ -23,27 +23,6 @@ if (!@ARGV or ($ARGV [0] eq "-h") or ($ARGV [0] eq "-help")) {
 	exit;
 }
 
-=cut
-$ap = Getopt::ArgParse->new_parser(
-       prog        => 'TAPscan Classify',
-       description => 'This tool will detect TAPs in your sequence data',
-   epilog      => 'This appears at the bottom of usage',
-);
-$ap->add_arg('--domtblout', '-d', required => 1);
-$ap->add_arg('--rules', '-r', required => 1);
-$ap->add_arg('--coverage', '-c', required => 0);
-$ap->add_arg('--output_family_classifications', '-o1', required => 0); # output.1
-$ap->add_arg('--output_family_statistics', '-o2', required => 0); #output.2
-$ap->add_arg('--output_subfamily_classifications', '-o3', required => 0); #output.3
-$ap->add_arg('--gene_model_filter', '-g', required => 0); #output.3
-
-$namespace = $parser->parse_args(@command_line);
-
-print $namespace;
-
-exit
-=cut
-
 # hmmsearch_output: domtblout file
 my $hmmsearch_output = $ARGV [0];
 # decision_table: rules file
