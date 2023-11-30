@@ -5,6 +5,7 @@ TAPscan (perl) script to detect TAPs (Transcription Associated Proteins) in your
 ## Requirements & Installation
 
 1. Install HMMER according to its [installation instructions](http://hmmer.org/documentation.html) for your system.
+2. [Perl](https://www.perl.org/get.html) is required (script was tested with `v5.34.0`)
 
 
 ## Usage
