@@ -1,6 +1,10 @@
 # TAPscan Classify
 
-TAPscan script to detect TAPs (Transcription Associated Proteins) in your sequence data.
+TAPscan (perl) script to detect TAPs (Transcription Associated Proteins) in your sequence data.
+
+## Requirements & Installation
+
+1. Install HMMER according to its [installation instructions](http://hmmer.org/documentation.html) for your system.
 
 
 ## Usage
