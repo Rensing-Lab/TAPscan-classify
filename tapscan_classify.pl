@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use File::Basename;
 
-my $tapscan_version = "v0.75";
+my $tapscan_version = "v4.76";
 print "Running TAPscan Classify version $tapscan_version \n\n";
 
 
