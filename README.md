@@ -8,6 +8,10 @@ TAPscan (perl) script to detect TAPs (Transcription Associated Proteins) in your
 2. [Perl](https://www.perl.org/get.html) is required (script was tested with `v5.34.0`)
 
 
+## Quickstart
+
+See the `test-data` folder for example data and TAPscan run script.
+
 ## Usage
 
 ***Step 1: Filter dataset for isoforms if necessary***
@@ -41,15 +45,15 @@ families with high accuracy through applying GA-thresholds and coverage values
 
 
 ```bash
-hmmsearch --domtblout sample.domtblout --cut_ga domains_v12.txt sample.fa
+hmmsearch --domtblout sample.domtblout --cut_ga domains_v13.txt sample.fa
 
-tapscan_classify.pl \
+tapscan_classify_v4.76.pl \
 sample.domtblout \
-rules_v81.txt \
+rules_v82.txt \
 sample.output.1.family_classifications.txt \
 sample.output.2.family_statistics.txt \
 sample.output.3.subfamily_classifications.txt \
-coverage_values_v10.txt
+coverage_values_v11.txt
 ```
 
 A script to run these commands on all FASTA files in a folder can be found in `tapscan_run.sh`
