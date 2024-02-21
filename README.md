@@ -10,7 +10,11 @@ TAPscan (perl) script to detect TAPs (Transcription Associated Proteins) in your
 
 ## Quickstart
 
-See the `test-data` folder for example data and TAPscan run script.
+The `test-data` folder contains example data (input and output). To run TAPscan on this folder, use the `tapscan_run.sh` script.
+
+```
+./tapscan_run.sh test-data
+```
 
 ## Usage
 
