@@ -1,6 +1,10 @@
 #                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
 # target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
 #------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+Ec-27_006660.1       -            825 Homeobox_KN          PF05920.15    40   6.8e-16   58.3   3.6   1   1   3.9e-19   2.4e-15   56.5   3.6     1    40   116   155   116   155 1.00 SAMSARA TALE homeobox domain transcription factor (825) ;mRNA; r:6086544-6090872
+Ec-04_000450.2       -            614 Homeobox_KN          PF05920.15    40   2.8e-15   56.3   2.0   1   1   4.7e-19   2.8e-15   56.3   2.0     1    40   486   525   486   525 0.99 TALE homeobox domain transcription factor (614) ;mRNA; f:532272-536041
+Ec-04_000450.1       -            618 Homeobox_KN          PF05920.15    40   2.9e-15   56.3   2.0   1   1   4.7e-19   2.9e-15   56.3   2.0     1    40   486   525   486   525 0.99 TALE homeobox domain transcription factor (618) ;mRNA; f:532272-536809
+Ec-14_005920.1       -            357 Homeobox_KN          PF05920.15    40   1.3e-12   47.8   0.8   1   1   4.6e-16   2.8e-12   46.7   0.8     1    40   238   277   238   277 0.99 OUROBOROS TALE homeobox domain transcription factor (357) ;mRNA; f:5484494-5490457
 Ec-02_006170.1       -            171 Acetyltransf_1       PF00583.26   117   3.9e-20   72.7   0.0   1   1   6.1e-23   4.8e-20   72.4   0.0    21   117    46   146    23   146 0.86 Acetyltransferase (GNAT) domain protein (171) ;mRNA; r:6309608-6312086
 Ec-26_005500.1       -            284 Acetyltransf_1       PF00583.26   117     5e-15   56.2   0.1   1   1   9.3e-18   7.3e-15   55.7   0.1    37   117   155   241   109   241 0.82 Secreted acetyltransferase (GNAT) domain protein (284) ;mRNA; f:5668536-5671027
 Ec-08_005180.1       -            341 Acetyltransf_1       PF00583.26   117   7.5e-14   52.4   0.1   1   1   1.6e-16   1.2e-13   51.7   0.1    34   117   192   293   151   293 0.77 Acetyltransferase (GNAT) domain protein (341) ;mRNA; r:4910940-4919049
@@ -1970,9 +1974,9 @@ Ec-11_002770.1       -            109 LD                   -             63     
 # Program:         hmmsearch
 # Version:         3.3.2 (Nov 2020)
 # Pipeline mode:   SEARCH
-# Query file:      ../domains_v12.txt
+# Query file:      ../domains_v13.txt
 # Target file:     PUBLIC_Ectocarpus-sp7_proteins.fa
-# Option settings: hmmsearch --domtblout PUBLIC_Ectocarpus-sp7_proteins.domtblout --cut_ga ../domains_v12.txt PUBLIC_Ectocarpus-sp7_proteins.fa 
+# Option settings: hmmsearch --domtblout PUBLIC_Ectocarpus-sp7_proteins.domtblout --cut_ga ../domains_v13.txt PUBLIC_Ectocarpus-sp7_proteins.fa 
 # Current dir:     /home/saskia/code/github/Rensing-Lab/TAPscan-classify/test-data
-# Date:            Thu Nov 30 12:05:57 2023
+# Date:            Wed Feb 21 11:34:15 2024
 # [ok]
